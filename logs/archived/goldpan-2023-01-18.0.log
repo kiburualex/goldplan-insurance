@@ -1,0 +1,87 @@
+2023-01-18 23:42:48,811 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplication v0.0.1 using Java 1.8.0_202 on HP-ENVY-x360 with PID 36314 (/home/kiburu/projects/dexni/goldenplan/goldplan/target/goldplan-0.0.1.jar started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-18 23:42:48,813 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-18 23:42:49,345 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-18 23:42:49,361 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2023-01-18 23:42:49,798 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 9092 (http)
+2023-01-18 23:42:49,807 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-9092"]
+2023-01-18 23:42:49,808 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-01-18 23:42:49,808 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-18 23:42:49,902 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-01-18 23:42:49,903 INFO [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 1041 ms
+2023-01-18 23:42:50,129 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-18 23:42:50,320 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-18 23:42:50,365 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-18 23:42:50,408 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-18 23:42:50,538 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-18 23:42:50,633 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-18 23:42:50,795 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-18 23:42:50,801 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-18 23:42:50,857 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-18 23:42:51,056 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-18 23:42:51,196 WARN [main] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103 Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-01-18 23:42:51,281 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-9092"]
+2023-01-18 23:42:51,302 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 9092 (http) with context path '/goldplan'
+2023-01-18 23:42:51,315 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplication in 2.888 seconds (JVM running for 3.272)
+2023-01-18 23:43:13,997 INFO [http-nio-9092-exec-4] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-18 23:43:13,997 INFO [http-nio-9092-exec-4] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
+2023-01-18 23:43:13,998 INFO [http-nio-9092-exec-4] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 1 ms
+2023-01-18 23:46:27,501 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.AppController:32 /app sessionId=14A2FBF78F4068CDBA9BA98A14D25C13
+2023-01-18 23:46:27,501 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.AppController:36 /app response={ResponseCode=00, ResponseDescription=Success}
+2023-01-18 23:47:36,831 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-18 23:47:36,832 INFO [SpringApplicationShutdownHook] org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl:538 HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-18 23:47:36,834 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-18 23:47:36,836 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-18 23:48:43,002 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplication v0.0.1 using Java 1.8.0_202 on HP-ENVY-x360 with PID 36943 (/home/kiburu/projects/dexni/goldenplan/goldplan/target/goldplan-0.0.1.jar started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-18 23:48:43,006 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-18 23:48:43,547 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-18 23:48:43,566 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2023-01-18 23:48:43,979 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 9092 (http)
+2023-01-18 23:48:43,989 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-9092"]
+2023-01-18 23:48:43,990 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-01-18 23:48:43,990 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-18 23:48:44,073 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-01-18 23:48:44,073 INFO [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 1009 ms
+2023-01-18 23:48:44,200 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-18 23:48:44,429 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-18 23:48:44,475 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-18 23:48:44,515 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-18 23:48:44,661 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-18 23:48:44,782 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-18 23:48:44,922 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-18 23:48:44,929 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-18 23:48:44,971 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-18 23:48:45,124 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-18 23:48:45,227 WARN [main] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103 Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-01-18 23:48:45,293 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-9092"]
+2023-01-18 23:48:45,308 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 9092 (http) with context path '/goldplan'
+2023-01-18 23:48:45,317 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplication in 2.685 seconds (JVM running for 3.037)
+2023-01-18 23:50:11,063 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-18 23:50:11,063 INFO [SpringApplicationShutdownHook] org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl:538 HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2023-01-18 23:50:11,065 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-18 23:50:11,066 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-18 23:51:04,261 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplication v0.0.1 using Java 1.8.0_202 on HP-ENVY-x360 with PID 37283 (/home/kiburu/projects/dexni/goldenplan/goldplan/target/goldplan-0.0.1.jar started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-18 23:51:04,264 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-18 23:51:04,864 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-18 23:51:04,883 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2023-01-18 23:51:05,439 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 9092 (http)
+2023-01-18 23:51:05,451 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-9092"]
+2023-01-18 23:51:05,452 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-01-18 23:51:05,452 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-18 23:51:05,547 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-01-18 23:51:05,547 INFO [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 1232 ms
+2023-01-18 23:51:05,763 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-18 23:51:06,002 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-18 23:51:06,055 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-18 23:51:06,096 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-18 23:51:06,236 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-18 23:51:06,330 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2023-01-18 23:51:06,493 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-18 23:51:06,501 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-18 23:51:06,560 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-18 23:51:06,784 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-18 23:51:06,941 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-9092"]
+2023-01-18 23:51:06,954 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 9092 (http) with context path '/goldplan'
+2023-01-18 23:51:06,965 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplication in 3.114 seconds (JVM running for 3.49)
+2023-01-18 23:51:21,097 INFO [http-nio-9092-exec-2] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-18 23:51:21,098 INFO [http-nio-9092-exec-2] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
+2023-01-18 23:51:21,099 INFO [http-nio-9092-exec-2] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 1 ms

@@ -1,0 +1,405 @@
+2023-01-23 00:12:41,814 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:90 GET /insurances/15 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 00:12:43,132 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:172 PUT /insurances/15 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 00:12:43,137 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:214 insurance Insurance(id=15, name=Pioneer Insurance 2, email=pioneer@gmail.com, phoneNumber=0728401608, paybill=910212)
+2023-01-23 00:12:43,138 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:221 insurance Insurance(id=15, name=Pioneer Insurance 2, email=pioneer@gmail.com, phoneNumber=0728401608, paybill=910212)
+2023-01-23 00:12:43,167 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:12:43,168 INFO [http-nio-9092-exec-8] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:13:01,538 INFO [http-nio-9092-exec-7] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=, noPagination=1, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:13:01,538 INFO [http-nio-9092-exec-7] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=1, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:16:05,873 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:16:05,875 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 00:16:05,879 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 00:24:23,191 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplicationTests using Java 1.8.0_202 on HP-ENVY-x360 with PID 52093 (started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 00:24:23,193 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:24:23,776 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:24:23,824 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interfaces.
+2023-01-23 00:24:24,355 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:24:24,476 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 00:24:24,614 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:24:24,697 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 00:24:25,002 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 00:24:25,030 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 00:24:25,535 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:24:25,543 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:24:26,396 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:24:26,622 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 00:24:26,901 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplicationTests in 4.09 seconds (JVM running for 4.964)
+2023-01-23 00:24:27,062 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:24:27,065 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 00:24:27,071 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 00:36:23,362 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplicationTests using Java 1.8.0_202 on HP-ENVY-x360 with PID 53543 (started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 00:36:23,364 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:36:23,947 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:36:24,000 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interfaces.
+2023-01-23 00:36:24,655 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:36:24,773 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 00:36:24,927 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:36:25,018 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 00:36:25,346 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 00:36:25,390 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 00:36:25,974 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:36:25,983 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:36:27,011 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:36:27,354 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 00:36:27,750 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplicationTests in 4.794 seconds (JVM running for 5.661)
+2023-01-23 00:36:27,939 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:36:27,941 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 00:36:27,947 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 00:37:31,921 INFO [restartedMain] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplication using Java 1.8.0_202 on HP-ENVY-x360 with PID 53691 (/home/kiburu/projects/dexni/goldenplan/goldplan/target/classes started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 00:37:31,923 INFO [restartedMain] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:37:31,964 INFO [restartedMain] org.springframework.boot.logging.DeferredLog:255 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:37:31,965 INFO [restartedMain] org.springframework.boot.logging.DeferredLog:255 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-23 00:37:32,393 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:37:32,431 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2023-01-23 00:37:32,951 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 9092 (http)
+2023-01-23 00:37:32,961 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-9092"]
+2023-01-23 00:37:32,962 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-01-23 00:37:32,963 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-23 00:37:33,006 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-01-23 00:37:33,006 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 1041 ms
+2023-01-23 00:37:33,192 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:37:33,225 INFO [restartedMain] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 00:37:33,332 INFO [restartedMain] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:37:33,383 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 00:37:33,578 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 00:37:33,599 INFO [restartedMain] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 00:37:34,054 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:37:34,060 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:37:34,621 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:37:34,739 INFO [restartedMain] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 00:37:34,885 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:59 LiveReload server is running on port 35729
+2023-01-23 00:37:34,897 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-9092"]
+2023-01-23 00:37:34,911 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 9092 (http) with context path ''
+2023-01-23 00:37:34,920 INFO [restartedMain] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplication in 3.336 seconds (JVM running for 3.653)
+2023-01-23 00:37:53,177 INFO [http-nio-9092-exec-1] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:37:53,177 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:37:53,179 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 2 ms
+2023-01-23 00:37:53,894 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:37:53,894 INFO [http-nio-9092-exec-1] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:37:58,079 INFO [http-nio-9092-exec-7] com.dexni.goldplan.controller.InsuranceController:244 DELETE /insurances/15 session=FEDEC43AFF887BBAD83E195CB0CA43A2
+2023-01-23 00:37:58,171 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:37:58,171 INFO [http-nio-9092-exec-10] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:38:02,882 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:38:02,882 INFO [http-nio-9092-exec-9] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:38:11,648 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.InsuranceController:89 GET /insurances/ids session=FEDEC43AFF887BBAD83E195CB0CA43A2 usersIds=[14, 13]
+2023-01-23 00:38:53,530 WARN [http-nio-9092-exec-6] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundaryLGlINYxvd62RxqnT;charset=UTF-8' not supported]
+2023-01-23 00:41:08,384 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:41:08,386 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 00:41:08,390 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 00:41:44,694 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplicationTests using Java 1.8.0_202 on HP-ENVY-x360 with PID 54290 (started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 00:41:44,696 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:41:45,258 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:41:45,305 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interfaces.
+2023-01-23 00:41:45,863 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:41:45,958 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 00:41:46,107 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:41:46,192 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 00:41:46,534 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 00:41:46,569 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 00:41:47,130 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:41:47,138 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:41:48,045 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:41:48,360 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 00:41:48,633 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplicationTests in 4.284 seconds (JVM running for 5.107)
+2023-01-23 00:41:48,795 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:41:48,798 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 00:41:48,807 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 00:41:56,053 INFO [restartedMain] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplication using Java 1.8.0_202 on HP-ENVY-x360 with PID 54381 (/home/kiburu/projects/dexni/goldenplan/goldplan/target/classes started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 00:41:56,055 INFO [restartedMain] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:41:56,111 INFO [restartedMain] org.springframework.boot.logging.DeferredLog:255 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:41:56,112 INFO [restartedMain] org.springframework.boot.logging.DeferredLog:255 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-23 00:41:56,636 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:41:56,694 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+2023-01-23 00:41:57,316 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 9092 (http)
+2023-01-23 00:41:57,327 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-9092"]
+2023-01-23 00:41:57,327 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-01-23 00:41:57,328 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-23 00:41:57,376 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-01-23 00:41:57,377 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 1265 ms
+2023-01-23 00:41:57,615 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:41:57,652 INFO [restartedMain] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 00:41:57,805 INFO [restartedMain] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:41:57,876 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 00:41:58,090 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 00:41:58,114 INFO [restartedMain] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 00:41:58,625 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:41:58,633 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:41:59,333 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:41:59,468 INFO [restartedMain] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 00:41:59,637 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:59 LiveReload server is running on port 35729
+2023-01-23 00:41:59,651 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-9092"]
+2023-01-23 00:41:59,667 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 9092 (http) with context path ''
+2023-01-23 00:41:59,677 INFO [restartedMain] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplication in 4.026 seconds (JVM running for 4.49)
+2023-01-23 00:42:28,066 INFO [http-nio-9092-exec-1] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:42:28,066 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:42:28,068 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 1 ms
+2023-01-23 00:42:28,786 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:42:28,787 INFO [http-nio-9092-exec-1] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:42:38,532 WARN [http-nio-9092-exec-8] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.ArrayList<java.lang.Long>` from String value (token `JsonToken.VALUE_STRING`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.util.ArrayList<java.lang.Long>` from String value (token `JsonToken.VALUE_STRING`)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 8] (through reference chain: com.dexni.goldplan.model.MultipleIdsMapper["ids"])]
+2023-01-23 00:43:28,576 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:43:28,579 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 00:43:28,583 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 00:53:24,813 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplicationTests using Java 1.8.0_202 on HP-ENVY-x360 with PID 55303 (started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 00:53:24,815 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:53:25,433 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:53:25,503 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+2023-01-23 00:53:26,060 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:53:26,175 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 00:53:26,346 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:53:26,436 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 00:53:26,761 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 00:53:26,797 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 00:53:27,388 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:53:27,397 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:53:28,440 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:53:28,681 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 00:53:28,972 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplicationTests in 4.555 seconds (JVM running for 5.43)
+2023-01-23 00:53:29,139 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:53:29,141 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 00:53:29,150 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 00:53:36,145 INFO [restartedMain] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplication using Java 1.8.0_202 on HP-ENVY-x360 with PID 55403 (/home/kiburu/projects/dexni/goldenplan/goldplan/target/classes started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 00:53:36,146 INFO [restartedMain] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:53:36,190 INFO [restartedMain] org.springframework.boot.logging.DeferredLog:255 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:53:36,190 INFO [restartedMain] org.springframework.boot.logging.DeferredLog:255 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-23 00:53:36,808 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:53:36,865 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+2023-01-23 00:53:37,530 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 9092 (http)
+2023-01-23 00:53:37,541 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-9092"]
+2023-01-23 00:53:37,542 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-01-23 00:53:37,542 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-23 00:53:37,592 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-01-23 00:53:37,592 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 1401 ms
+2023-01-23 00:53:37,843 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:53:37,895 INFO [restartedMain] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 00:53:38,027 INFO [restartedMain] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:53:38,113 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 00:53:38,380 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 00:53:38,408 INFO [restartedMain] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 00:53:38,931 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:53:38,939 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:53:39,622 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:53:39,758 INFO [restartedMain] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 00:53:39,921 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:59 LiveReload server is running on port 35729
+2023-01-23 00:53:39,934 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-9092"]
+2023-01-23 00:53:39,948 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 9092 (http) with context path ''
+2023-01-23 00:53:39,958 INFO [restartedMain] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplication in 4.284 seconds (JVM running for 4.674)
+2023-01-23 00:53:46,406 INFO [http-nio-9092-exec-1] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:53:46,406 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:53:46,407 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 1 ms
+2023-01-23 00:53:47,139 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:53:47,149 INFO [http-nio-9092-exec-1] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:53:56,601 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:259 PUT /insurances/ids session=FEDEC43AFF887BBAD83E195CB0CA43A2 ids=[14, 13]
+2023-01-23 00:53:56,700 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:53:56,700 INFO [http-nio-9092-exec-10] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:54:05,947 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:54:05,947 INFO [http-nio-9092-exec-9] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:54:35,162 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.InsuranceController:108 POST /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 payload=Insurance(id=0, name=Pioneer Insurance, email=pioneerinsurance@gmail.com, phoneNumber=0711902209, paybill=892302323)
+2023-01-23 00:54:35,222 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:54:35,222 INFO [http-nio-9092-exec-3] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:55:21,257 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/16 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 00:55:24,096 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/16 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 00:58:09,589 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:58:09,592 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 00:58:09,595 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 00:58:47,319 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplicationTests using Java 1.8.0_202 on HP-ENVY-x360 with PID 55880 (started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 00:58:47,321 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:58:47,949 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:58:48,016 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+2023-01-23 00:58:48,683 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:58:48,862 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 00:58:49,029 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:58:49,123 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 00:58:49,448 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 00:58:49,477 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 00:58:50,044 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:58:50,052 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:58:50,979 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:58:51,338 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 00:58:51,728 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplicationTests in 4.812 seconds (JVM running for 5.699)
+2023-01-23 00:58:51,829 INFO [main] com.dexni.goldplan.configuration.LoadDatabase:53 Preloading default insurances 2
+2023-01-23 00:58:51,992 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:58:51,995 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 00:58:52,003 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 00:59:04,556 INFO [restartedMain] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplication using Java 1.8.0_202 on HP-ENVY-x360 with PID 56000 (/home/kiburu/projects/dexni/goldenplan/goldplan/target/classes started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 00:59:04,558 INFO [restartedMain] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 00:59:04,617 INFO [restartedMain] org.springframework.boot.logging.DeferredLog:255 Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:59:04,618 INFO [restartedMain] org.springframework.boot.logging.DeferredLog:255 For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-23 00:59:05,186 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:59:05,249 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interfaces.
+2023-01-23 00:59:05,919 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 9092 (http)
+2023-01-23 00:59:05,929 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-9092"]
+2023-01-23 00:59:05,930 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-01-23 00:59:05,931 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-23 00:59:05,982 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-01-23 00:59:05,982 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 1363 ms
+2023-01-23 00:59:06,221 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:59:06,260 INFO [restartedMain] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 00:59:06,389 INFO [restartedMain] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:59:06,472 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 00:59:06,748 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 00:59:06,774 INFO [restartedMain] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 00:59:07,296 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:59:07,304 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:59:08,026 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:59:08,153 INFO [restartedMain] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 00:59:08,309 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:59 LiveReload server is running on port 35729
+2023-01-23 00:59:08,322 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-9092"]
+2023-01-23 00:59:08,339 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 9092 (http) with context path ''
+2023-01-23 00:59:08,354 INFO [restartedMain] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplication in 4.356 seconds (JVM running for 4.749)
+2023-01-23 00:59:13,896 INFO [http-nio-9092-exec-1] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:59:13,896 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:59:13,897 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 1 ms
+2023-01-23 00:59:14,593 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/16 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 00:59:19,822 INFO [http-nio-9092-exec-7] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/16 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 00:59:36,234 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:59:36,234 INFO [http-nio-9092-exec-10] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:59:40,653 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:59:40,654 INFO [http-nio-9092-exec-5] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 00:59:47,633 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:89 GET /insurances/ids session=FEDEC43AFF887BBAD83E195CB0CA43A2 usersIds=[17]
+2023-01-23 01:01:50,126 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:01:53,796 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:01:53,806 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:222 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 01:01:53,806 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:229 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 01:01:53,856 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:01:53,856 INFO [http-nio-9092-exec-3] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:02:49,031 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:02:50,199 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:02:50,209 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:222 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 01:02:50,210 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:229 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 01:02:50,249 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:02:50,249 INFO [http-nio-9092-exec-8] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:02:56,667 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:02:56,668 INFO [http-nio-9092-exec-10] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:03:10,634 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=2023-01-22, endDate=2023-01-22, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:03:10,635 INFO [http-nio-9092-exec-9] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=2023-01-22, strEndDate=2023-01-23, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:03:27,870 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=2023-01-23, endDate=2023-01-23, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:03:27,871 INFO [http-nio-9092-exec-5] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=2023-01-23, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:03:35,218 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:03:35,219 INFO [http-nio-9092-exec-3] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:03:57,063 INFO [http-nio-9092-exec-7] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:03:58,763 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:03:58,764 INFO [http-nio-9092-exec-9] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:04:01,301 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/16 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:04:03,355 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:04:03,356 INFO [http-nio-9092-exec-4] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:04:07,532 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:04:07,533 INFO [http-nio-9092-exec-8] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:06:18,069 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:06:18,069 INFO [http-nio-9092-exec-4] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:06:20,852 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:06:23,083 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:06:23,090 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:222 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 01:06:23,090 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:229 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 01:06:23,127 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:06:23,127 INFO [http-nio-9092-exec-4] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:06:31,635 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/12 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:06:35,835 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/12 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:08:19,904 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:08:19,904 INFO [http-nio-9092-exec-8] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:29:01,401 INFO [http-nio-9092-exec-7] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:29:03,080 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:29:03,093 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:222 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 01:29:03,094 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:229 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 01:29:03,123 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:29:03,123 INFO [http-nio-9092-exec-1] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:29:09,625 INFO [http-nio-9092-exec-2] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:29:12,548 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/17 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
+2023-01-23 01:29:28,190 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:29:28,190 INFO [http-nio-9092-exec-10] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 01:29:31,637 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.AppController:34 /app sessionId=FEDEC43AFF887BBAD83E195CB0CA43A2
+2023-01-23 01:29:31,637 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.AppController:43 /app sessionId=FEDEC43AFF887BBAD83E195CB0CA43A2 response={ResponseCode=00, data=[Alex, Kiburu, Muriithi], ResponseDescription=Success}
+2023-01-23 01:29:36,050 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 01:29:36,052 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-23 01:29:36,058 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-01-23 13:48:30,793 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplication v0.0.1 using Java 1.8.0_202 on HP-ENVY-x360 with PID 27147 (/home/kiburu/projects/dexni/goldenplan/goldplan/target/goldplan-0.0.1.jar started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-01-23 13:48:30,796 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-01-23 13:48:31,297 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 13:48:31,336 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+2023-01-23 13:48:31,737 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 9092 (http)
+2023-01-23 13:48:31,747 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-9092"]
+2023-01-23 13:48:31,748 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-01-23 13:48:31,748 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-23 13:48:31,840 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-01-23 13:48:31,840 INFO [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 999 ms
+2023-01-23 13:48:32,080 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 13:48:32,116 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-01-23 13:48:32,264 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 13:48:32,335 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-01-23 13:48:32,546 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-01-23 13:48:32,575 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-01-23 13:48:32,969 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 13:48:32,981 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 13:48:33,472 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 13:48:33,597 INFO [main] org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping:53 Adding welcome page: class path resource [static/index.html]
+2023-01-23 13:48:33,739 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-9092"]
+2023-01-23 13:48:33,752 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 9092 (http) with context path ''
+2023-01-23 13:48:33,763 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplication in 3.338 seconds (JVM running for 3.666)
+2023-01-23 13:49:13,975 INFO [http-nio-9092-exec-1] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 13:49:13,975 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
+2023-01-23 13:49:13,976 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 1 ms
+2023-01-23 13:49:19,933 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.AppController:34 /app sessionId=5E4E2B39FA4CCEE30D7AD3255956C65F
+2023-01-23 13:49:19,934 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.AppController:43 /app sessionId=5E4E2B39FA4CCEE30D7AD3255956C65F response={ResponseCode=00, data=[Alex, Kiburu, Muriithi], ResponseDescription=Success}
+2023-01-23 13:49:21,772 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=5E4E2B39FA4CCEE30D7AD3255956C65F request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:21,773 INFO [http-nio-9092-exec-8] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:24,582 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/17 session=5E4E2B39FA4CCEE30D7AD3255956C65F 
+2023-01-23 13:49:25,842 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/17 session=5E4E2B39FA4CCEE30D7AD3255956C65F 
+2023-01-23 13:49:25,851 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:222 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 13:49:25,851 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:229 insurance Insurance(id=17, name=Pivotal Insurances, email=pivotal@gmail.com, phoneNumber=254728506151, paybill=506150)
+2023-01-23 13:49:25,892 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=5E4E2B39FA4CCEE30D7AD3255956C65F request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:25,893 INFO [http-nio-9092-exec-9] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:28,202 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=5E4E2B39FA4CCEE30D7AD3255956C65F request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:28,203 INFO [http-nio-9092-exec-3] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:33,335 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=5E4E2B39FA4CCEE30D7AD3255956C65F request=RequestMapper(startDate=null, endDate=null, search=piv, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:33,336 INFO [http-nio-9092-exec-6] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=piv, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:34,780 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=5E4E2B39FA4CCEE30D7AD3255956C65F request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:34,780 INFO [http-nio-9092-exec-1] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:39,039 INFO [http-nio-9092-exec-2] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=5E4E2B39FA4CCEE30D7AD3255956C65F request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:49:39,040 INFO [http-nio-9092-exec-2] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:54:56,392 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=5E4E2B39FA4CCEE30D7AD3255956C65F request=RequestMapper(startDate=2023-01-02, endDate=2023-01-23, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:54:56,393 INFO [http-nio-9092-exec-3] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=2023-01-02, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:54:57,833 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=5E4E2B39FA4CCEE30D7AD3255956C65F request=RequestMapper(startDate=2023-01-02, endDate=2023-01-23, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:54:57,833 INFO [http-nio-9092-exec-6] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=2023-01-02, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:55:00,728 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=5E4E2B39FA4CCEE30D7AD3255956C65F request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 13:55:00,728 INFO [http-nio-9092-exec-1] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:15:37,508 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=AA98768D6B4E89616624E20C9E7CC566 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:15:37,508 INFO [http-nio-9092-exec-6] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:15:40,354 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=AA98768D6B4E89616624E20C9E7CC566 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:15:40,354 INFO [http-nio-9092-exec-8] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:15:47,035 INFO [http-nio-9092-exec-2] com.dexni.goldplan.controller.InsuranceController:98 GET /insurances/12 session=AA98768D6B4E89616624E20C9E7CC566 
+2023-01-23 15:15:49,825 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:180 PUT /insurances/12 session=AA98768D6B4E89616624E20C9E7CC566 
+2023-01-23 15:16:13,041 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=AA98768D6B4E89616624E20C9E7CC566 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:16:13,042 INFO [http-nio-9092-exec-3] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:16:16,064 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=AA98768D6B4E89616624E20C9E7CC566 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:16:16,064 INFO [http-nio-9092-exec-4] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:16:37,326 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.AppController:34 /app sessionId=AA98768D6B4E89616624E20C9E7CC566
+2023-01-23 15:16:37,326 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.AppController:43 /app sessionId=AA98768D6B4E89616624E20C9E7CC566 response={ResponseCode=00, data=[Alex, Kiburu, Muriithi], ResponseDescription=Success}
+2023-01-23 15:16:41,862 INFO [http-nio-9092-exec-7] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=AA98768D6B4E89616624E20C9E7CC566 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:16:41,862 INFO [http-nio-9092-exec-7] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:38:04,391 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=AA98768D6B4E89616624E20C9E7CC566 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:38:04,391 INFO [http-nio-9092-exec-8] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:45:31,661 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=AA98768D6B4E89616624E20C9E7CC566 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:45:31,662 INFO [http-nio-9092-exec-8] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:45:34,154 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=AA98768D6B4E89616624E20C9E7CC566 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 15:45:34,155 INFO [http-nio-9092-exec-3] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 16:53:24,933 INFO [http-nio-9092-exec-2] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=93BFD030627AE3CD16F032B963AB6769 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 16:53:24,934 INFO [http-nio-9092-exec-2] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 16:54:41,755 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.AppController:34 /app sessionId=93BFD030627AE3CD16F032B963AB6769
+2023-01-23 16:54:41,756 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.AppController:43 /app sessionId=93BFD030627AE3CD16F032B963AB6769 response={ResponseCode=00, data=[Alex, Kiburu, Muriithi], ResponseDescription=Success}
+2023-01-23 16:54:42,372 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=93BFD030627AE3CD16F032B963AB6769 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 16:54:42,372 INFO [http-nio-9092-exec-5] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 16:54:43,674 INFO [http-nio-9092-exec-2] com.dexni.goldplan.controller.AppController:34 /app sessionId=93BFD030627AE3CD16F032B963AB6769
+2023-01-23 16:54:43,674 INFO [http-nio-9092-exec-2] com.dexni.goldplan.controller.AppController:43 /app sessionId=93BFD030627AE3CD16F032B963AB6769 response={ResponseCode=00, data=[Alex, Kiburu, Muriithi], ResponseDescription=Success}
+2023-01-23 16:54:44,540 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=93BFD030627AE3CD16F032B963AB6769 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 16:54:44,541 INFO [http-nio-9092-exec-6] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:05:49,512 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=6A9DEC8CE835703708C26EFB56A15FD8 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:05:49,513 INFO [http-nio-9092-exec-4] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:05:57,591 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=6A9DEC8CE835703708C26EFB56A15FD8 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:05:57,592 INFO [http-nio-9092-exec-5] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:06:02,618 INFO [http-nio-9092-exec-2] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=6A9DEC8CE835703708C26EFB56A15FD8 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:06:02,619 INFO [http-nio-9092-exec-2] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:06:05,244 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.AppController:34 /app sessionId=6A9DEC8CE835703708C26EFB56A15FD8
+2023-01-23 22:06:05,244 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.AppController:43 /app sessionId=6A9DEC8CE835703708C26EFB56A15FD8 response={ResponseCode=00, data=[Alex, Kiburu, Muriithi], ResponseDescription=Success}
+2023-01-23 22:06:10,695 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=6A9DEC8CE835703708C26EFB56A15FD8 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:06:10,695 INFO [http-nio-9092-exec-6] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:06:14,348 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=6A9DEC8CE835703708C26EFB56A15FD8 request=RequestMapper(startDate=null, endDate=null, search=, noPagination=1, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-23 22:06:14,349 INFO [http-nio-9092-exec-5] com.dexni.goldplan.service.InsuranceServiceImpl:58 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-24, search=, noPagination=1, pageNumber=0, pageSize=10, sortBy=id)

@@ -1,0 +1,9 @@
+2023-01-24 00:01:54,098 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.AppController:34 /app sessionId=43550C686B148D6F311DF730BB7B5CC2
+2023-01-24 00:01:54,101 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.AppController:43 /app sessionId=43550C686B148D6F311DF730BB7B5CC2 response={ResponseCode=00, data=[Alex, Kiburu, Muriithi], ResponseDescription=Success}
+2023-01-24 00:01:55,962 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=43550C686B148D6F311DF730BB7B5CC2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-24 00:01:55,962 INFO [http-nio-9092-exec-1] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-25, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-24 00:02:05,832 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=43550C686B148D6F311DF730BB7B5CC2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-24 00:02:05,833 INFO [http-nio-9092-exec-9] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-25, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
+2023-01-24 02:32:44,831 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-24 02:32:44,835 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-01-24 02:32:44,839 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.

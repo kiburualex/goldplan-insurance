@@ -1,0 +1,23 @@
+server:
+  port: 9092
+  
+
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/goldplan
+        username: goldplan
+        password: goldplan
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+#h2 properties
+#spring:
+#    datasource:
+#        url: jdbc:h2:mem:testdb
+#        driverClassName: org.h2.Driver
+#        username: sa
+#        password: password
+#    jpa:
+#        database-platform: org.hibernate.dialect.H2Dialect
+#        show-sql: true
