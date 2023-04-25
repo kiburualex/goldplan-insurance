@@ -8,7 +8,16 @@ import { Box } from '@mui/material';
 
 const Page = forwardRef(({ children, title = '', ...other }, ref) => (
   <Box ref={ref} {...other}>
-    <Helmet>
+    <Helmet
+      style={[
+      {
+        cssText: `
+          .Toastify__toast--success {
+            background: #00AB55 !important;
+          }
+      `,
+      },
+    ]}>
       <title>{title}</title>
     </Helmet>
     {children}

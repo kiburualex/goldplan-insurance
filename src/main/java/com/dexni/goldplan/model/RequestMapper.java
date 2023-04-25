@@ -41,7 +41,7 @@ public class RequestMapper {
         filterMapper.setStrEndDate(endDate);
         
         if (startDate != null && !startDate.equals("null") && !startDate.isEmpty()) {
-                filterMapper.setStrStartDate(startDate);
+            filterMapper.setStrStartDate(startDate);
         }else{
             // set default as 1900-01-01 to allow fetching all data since jpa doesn't allow (CASE WHEN to select a condition but a value)
             filterMapper.setStrStartDate("1900-01-01");

@@ -1,9 +1,97 @@
-2023-01-24 00:01:54,098 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.AppController:34 /app sessionId=43550C686B148D6F311DF730BB7B5CC2
-2023-01-24 00:01:54,101 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.AppController:43 /app sessionId=43550C686B148D6F311DF730BB7B5CC2 response={ResponseCode=00, data=[Alex, Kiburu, Muriithi], ResponseDescription=Success}
-2023-01-24 00:01:55,962 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=43550C686B148D6F311DF730BB7B5CC2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
-2023-01-24 00:01:55,962 INFO [http-nio-9092-exec-1] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-25, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
-2023-01-24 00:02:05,832 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=43550C686B148D6F311DF730BB7B5CC2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
-2023-01-24 00:02:05,833 INFO [http-nio-9092-exec-9] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-25, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
-2023-01-24 02:32:44,831 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-01-24 02:32:44,835 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
-2023-01-24 02:32:44,839 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-04-24 10:21:16,281 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplicationTests using Java 1.8.0_202 on HP-ENVY-x360 with PID 10560 (started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-04-24 10:21:16,283 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-04-24 10:21:17,010 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-24 10:21:17,096 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 73 ms. Found 4 JPA repository interfaces.
+2023-04-24 10:21:17,595 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-04-24 10:21:18,079 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-04-24 10:21:18,233 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-24 10:21:18,334 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-24 10:21:18,521 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-24 10:21:18,654 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-24 10:21:19,381 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-24 10:21:19,390 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-24 10:21:20,428 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-24 10:21:21,334 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplicationTests in 5.502 seconds (JVM running for 6.451)
+2023-04-24 10:21:21,534 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-24 10:21:21,535 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-04-24 10:21:21,542 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-04-24 10:30:10,760 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting GoldplanApplicationTests using Java 1.8.0_202 on HP-ENVY-x360 with PID 11416 (started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-04-24 10:30:10,762 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-04-24 10:30:11,446 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-24 10:30:11,542 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 83 ms. Found 4 JPA repository interfaces.
+2023-04-24 10:30:12,065 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-04-24 10:30:12,512 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-04-24 10:30:12,669 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-24 10:30:12,728 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-24 10:30:12,923 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-24 10:30:13,042 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-24 10:30:13,814 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-24 10:30:13,825 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-24 10:30:14,899 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-24 10:30:15,706 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started GoldplanApplicationTests in 5.356 seconds (JVM running for 6.261)
+2023-04-24 10:30:15,854 INFO [main] org.springframework.test.context.support.AbstractTestContextBootstrapper:305 Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.dexni.goldplan.CashCardApplicationTests], using SpringBootContextLoader
+2023-04-24 10:30:15,855 INFO [main] org.springframework.test.context.support.AbstractContextLoader:264 Could not detect default resource locations for test class [com.dexni.goldplan.CashCardApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-04-24 10:30:15,856 INFO [main] org.springframework.test.context.support.AnnotationConfigContextLoaderUtils:83 Could not detect default configuration classes for test class [com.dexni.goldplan.CashCardApplicationTests]: CashCardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-04-24 10:30:15,860 INFO [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper:238 Found @SpringBootConfiguration com.dexni.goldplan.GoldplanApplication for test class com.dexni.goldplan.CashCardApplicationTests
+2023-04-24 10:30:15,862 INFO [main] org.springframework.test.context.support.AbstractTestContextBootstrapper:245 Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2023-04-24 10:30:15,863 INFO [main] org.springframework.test.context.support.AbstractTestContextBootstrapper:174 Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@785d6a98, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@614d7fbf, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6c06b1bc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1d8dbf10, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e171f93, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4ad3969, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5d7ff311, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2d7aa291, org.springframework.test.context.event.EventPublishingTestExecutionListener@1ba7db2a, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@762cdf46, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@54e94de9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2cff03cf, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@924f3f1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@19e2db7c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@77a4bac, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@534fc1f7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7d5a0b14]
+2023-04-24 10:30:15,925 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting CashCardApplicationTests using Java 1.8.0_202 on HP-ENVY-x360 with PID 11416 (started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-04-24 10:30:15,926 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-04-24 10:30:16,117 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-24 10:30:16,132 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2023-04-24 10:30:16,474 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 0 (http)
+2023-04-24 10:30:16,490 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-04-24 10:30:16,491 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-04-24 10:30:16,492 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-04-24 10:30:16,569 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-04-24 10:30:16,570 INFO [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 639 ms
+2023-04-24 10:30:16,671 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-2 - Starting...
+2023-04-24 10:30:16,693 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-2 - Start completed.
+2023-04-24 10:30:16,728 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-24 10:30:16,733 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-24 10:30:16,853 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-24 10:30:16,854 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-24 10:30:17,143 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-24 10:30:17,465 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-auto-1"]
+2023-04-24 10:30:17,482 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 37111 (http) with context path ''
+2023-04-24 10:30:17,489 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started CashCardApplicationTests in 1.623 seconds (JVM running for 8.043)
+2023-04-24 10:30:17,590 INFO [http-nio-auto-1-exec-1] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-24 10:30:17,590 INFO [http-nio-auto-1-exec-1] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
+2023-04-24 10:30:17,591 INFO [http-nio-auto-1-exec-1] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 1 ms
+2023-04-24 10:30:17,635 INFO [http-nio-auto-1-exec-1] com.dexni.goldplan.controller.InsuranceController:91 GET /insurances/99 session=D4F8BDB05C4DBB0961D0381AF131DA3B 
+2023-04-24 10:30:17,801 INFO [http-nio-auto-1-exec-2] com.dexni.goldplan.controller.InsuranceController:91 GET /insurances/1000 session=ACCCC54B48C055748CABCF9417E45A8A 
+2023-04-24 10:30:17,864 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-24 10:30:17,867 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-04-24 10:30:17,877 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
+2023-04-24 10:30:17,900 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-24 10:30:17,901 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-2 - Shutdown initiated...
+2023-04-24 10:30:17,922 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-2 - Shutdown completed.
+2023-04-24 10:56:32,869 INFO [main] org.springframework.boot.StartupInfoLogger:55 Starting CashCardApplicationTests using Java 19.0.1 on HP-ENVY-x360 with PID 13105 (started by kiburu in /home/kiburu/projects/dexni/goldenplan/goldplan)
+2023-04-24 10:56:32,870 INFO [main] org.springframework.boot.SpringApplication:631 No active profile set, falling back to 1 default profile: "default"
+2023-04-24 10:56:33,335 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:132 Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-24 10:56:33,386 INFO [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate:201 Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2023-04-24 10:56:33,860 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 Tomcat initialized with port(s): 0 (http)
+2023-04-24 10:56:33,869 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-04-24 10:56:33,870 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting service [Tomcat]
+2023-04-24 10:56:33,871 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-04-24 10:56:33,947 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring embedded WebApplicationContext
+2023-04-24 10:56:33,947 INFO [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:292 Root WebApplicationContext: initialization completed in 1063 ms
+2023-04-24 10:56:34,017 INFO [main] com.zaxxer.hikari.HikariDataSource:110 HikariPool-1 - Starting...
+2023-04-24 10:56:34,222 INFO [main] com.zaxxer.hikari.HikariDataSource:123 HikariPool-1 - Start completed.
+2023-04-24 10:56:34,326 INFO [main] org.hibernate.jpa.internal.util.LogHelper:31 HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-24 10:56:34,372 INFO [main] org.hibernate.Version:44 HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-24 10:56:34,531 INFO [main] org.hibernate.annotations.common.reflection.java.JavaReflectionManager:56 HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-24 10:56:34,602 INFO [main] org.hibernate.dialect.Dialect:175 HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-24 10:56:35,012 INFO [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52 HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-24 10:56:35,018 INFO [main] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:437 Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-24 10:56:35,547 WARN [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219 spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-24 10:56:35,912 INFO [main] org.apache.juli.logging.DirectJDKLog:173 Starting ProtocolHandler ["http-nio-auto-1"]
+2023-04-24 10:56:35,922 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 Tomcat started on port(s): 44191 (http) with context path ''
+2023-04-24 10:56:35,930 INFO [main] org.springframework.boot.StartupInfoLogger:61 Started CashCardApplicationTests in 3.368 seconds (JVM running for 4.001)
+2023-04-24 10:56:36,158 INFO [http-nio-auto-1-exec-1] org.apache.juli.logging.DirectJDKLog:173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-24 10:56:36,158 INFO [http-nio-auto-1-exec-1] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
+2023-04-24 10:56:36,159 INFO [http-nio-auto-1-exec-1] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 1 ms
+2023-04-24 10:56:36,182 INFO [http-nio-auto-1-exec-1] com.dexni.goldplan.controller.InsuranceController:91 GET /insurances/99 session=F6249B6586CEDDE8C0298E2F2094DDD5 
+2023-04-24 10:56:36,308 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-24 10:56:36,309 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
+2023-04-24 10:56:36,318 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.

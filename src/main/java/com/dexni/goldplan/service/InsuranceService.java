@@ -24,17 +24,19 @@ public interface InsuranceService {
     
     List<Insurance> findInsurancesByIdsIn(List<Long> ids);
     
-    Optional<Insurance> findInsuranceById(Long id);
+    Insurance findInsuranceById(Long id);
     
     Optional<Insurance> findInsuranceByName(String name);
     
     Optional<Insurance> findInsuranceByEmail(String email);
     
     Optional<Insurance> findInsuranceByPaybill(String paybill);
-    
-    Insurance saveInsurance(Insurance insurance);
-    
+
+    Insurance createInsurance(Insurance insurance);
+
+    Insurance updateInsurance(Long id, Insurance insurance);
+
     Boolean deleteInsuranceById(Long id);
     
-    Boolean deleteInsuranceByIds(List<Long> ids);
+    Boolean deleteInsurancesByIds(List<Long> ids);
 }

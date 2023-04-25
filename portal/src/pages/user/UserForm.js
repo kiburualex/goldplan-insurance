@@ -4,23 +4,17 @@ import { useState, useEffect } from 'react';
 import { Link as RouterLink, useNavigate, useParams } from 'react-router-dom';
 import BlockUi from 'react-block-ui';
 
+import { toast } from 'react-toastify';
+
 // material
 import {
     Container,
     Alert,
     Box,
     Switch,
-    Chip,
-    MenuItem,
-    ListItemText,
-    InputLabel,
-    FormControl,
-    FormHelperText,
     Card,
     CardContent,
     CardActions,
-    Checkbox,
-    Select,
     Grid,
     Stack,
     Button,
@@ -37,17 +31,6 @@ import Page from '../../components/Page';
 import Api from '../../common/Api';
 import {BASE_URL} from '../../common/Props';
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-    PaperProps: {
-        style: {
-            maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-            width: "33%",
-        },
-    },
-};
-
 export default function UserForm() {
     const [isUpdateView, setIsUpdateView] = useState(false);
     const [blocking, setBlocking] = useState(false);
@@ -58,8 +41,6 @@ export default function UserForm() {
     const [password, setPassword] = useState("");
     const [passwordPlaceHolder, setPasswordPlaceHolder] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [organization, setOrganization] = useState("");
-    const [selectedRoles, setSelectedRoles] = useState([]);
     const [image, setImage] = useState({ preview: "", raw: "" });
     const [previousImage, setPreviousImage] = useState({ preview: "", raw: "" });
     const [disableRevertUploadBtn, setDisableRevertUploadBtn] = useState(true);
@@ -86,110 +67,28 @@ export default function UserForm() {
             status: '',
             message: ''
         },
-        organization: {
-            status: '',
-            message: ''
-        },
-        roles: {
-            status: '',
-            message: ''
-        },
         status: {
             status: '',
             message: ''
         }
     });
-    const [organizations, setOrganizations] = useState([]);
-    const [roles, setRoles] = useState([]);
     const [loading, setLoading] = useState(false);
     const [showGlobalErrorAlert, setShowGlobalErrorAlert] = useState(false);
     const [globalErrorMessage, setGlobalErrorMessage] = useState("");
     const navigate = useNavigate();    
     const { id } = useParams();
 
-    useEffect(() => { 
-        const fetchRoles = async () => {
-            // set roles
-            try{
-                setShowGlobalErrorAlert(false);
-                const rolesUrl = `${BASE_URL}/roles/?noPagination=1`;
-                await Api.get(rolesUrl).then((response) =>{
-                    console.log(response);
-                    const json = response.data;
-                    if(json.return_code === "00"){
-                        const fetchedRoles = []
-                        json.data.map(role =>(
-                            fetchedRoles.push({ value: role.id, label: role.name })
-                        ));
-                        setRoles(fetchedRoles);
-                      }else{
-                        setShowGlobalErrorAlert(true);
-                            setGlobalErrorMessage(json.return_message);
-                      }               
-                })
-                .catch((err) =>{
-                    console.log(err);
-                    setShowGlobalErrorAlert(true);
-                    setGlobalErrorMessage("Error Fetching Roles!");
-                })
-            }catch(err){
-                console.log(err);
-                setShowGlobalErrorAlert(true);
-                setGlobalErrorMessage("Error Fetching Roles");
-            }
-        }
-        const fetchOrganizations = async () => {
-            try{
-                setShowGlobalErrorAlert(false);
-                // set organizations
-                const organizationsUrl = `${BASE_URL}/organizations/?noPagination=1`;
-                await Api.get(organizationsUrl).then((response) =>{
-                    console.log(response);
-                    const json = response.data;
-                    if(json.return_code === "00"){
-                        const fetchedOrganizations = []
-                        json.data.map(organization =>(
-                            fetchedOrganizations.push({ value: organization.id, label: organization.name })
-                        ));
-                        setOrganizations(fetchedOrganizations);
-                      }else{
-                        setShowGlobalErrorAlert(true);
-                            setGlobalErrorMessage(json.return_message);
-                      }               
-                })
-                .catch((err) =>{
-                    console.log(err);
-                    setShowGlobalErrorAlert(true);
-                    setGlobalErrorMessage("Error fetching data!");
-                })
-            }catch(err){
-                console.log(err);
-                setShowGlobalErrorAlert(true);
-                setGlobalErrorMessage("Error fetching data");
-            }
-        }
+    useEffect(() => {
 
         const fetchData = async () => {
-            const url = `${BASE_URL}/users/read/${id}`;
+            const url = `${BASE_URL}/users/${id}`;
             await Api.get(url).then((response) =>{
-                const newData = response.data;
-                if(newData.return_code === "00"){
-                    const { data } = newData;
+                const json = response.data;
+                const { data } = json;
+                if(data){
                     setName(data.name);
                     setEmail(data.email);
-                    setPhoneNumber(data.msisdn);
-                    if(data.organization){
-                        setOrganization(data.organization.id)
-                    }
-                    if(data.roles.length > 0){
-                        console.log("data.roles -> ", data.roles)
-                        const rolesx = []
-                        data.roles.map(role =>(
-                            rolesx.push(role.id)
-                        ));
-                        console.log("roles -> ", rolesx)
-                        setSelectedRoles(rolesx)
-                    }
+                    setPhoneNumber(data.phoneNumber);
                     setPasswordPlaceHolder(data.password);
                     if(data.avatarContent){
                         decodeArrayBuffer(data.avatarContent);
@@ -203,19 +102,22 @@ export default function UserForm() {
                     errors.phoneNumber.status =  "valid";
                     errors.password.status =  "valid";
                     errors.confirmPassword.status =  "valid";
-                    errors.organization.status =  "valid";
-                    errors.roles.status =  "valid";
                     errors.status.status =  "valid";
                     setErrors(errors);
                 }else{
                     setShowGlobalErrorAlert(true);
-                    setGlobalErrorMessage(newData.return_message);
+                    setGlobalErrorMessage(json.message);
                 }             
             })
             .catch((err) =>{
-                console.log(err);
-                setShowGlobalErrorAlert(true);
-                setGlobalErrorMessage("Error fetching data!");
+                const resp = Api.getErrorMessage(err);
+                if(resp === "token_expired"){
+                    localStorage.removeItem("token");
+                    navigate("/login")
+                }else{
+                    setGlobalErrorMessage(resp);
+                    setShowGlobalErrorAlert(true);
+                }
             })
         };
 
@@ -223,10 +125,8 @@ export default function UserForm() {
         if(id){
             setIsUpdateView(true);
             fetchData();
-        }   
+        }
 
-        fetchRoles();
-        fetchOrganizations();
         setBlocking(false);
         
     }, []);
@@ -295,12 +195,6 @@ export default function UserForm() {
                 setPhoneNumber(value.replace(/\D/, ''))
                 break;
             }
-            case "organization": {
-                setOrganization(value)
-                errors.organization.status = (value !== "") ? "valid" : "invalid";
-                errors.organization.message = (value !== "") ? "valid" : "Please select your organization";
-                break;
-            }
             case "password": {
                 setPassword(value)
                 errors.password.status = (value !== "") ? "valid" : "invalid";
@@ -311,12 +205,6 @@ export default function UserForm() {
                 setConfirmPassword(value)
                 errors.confirmPassword.status = (value !== "valid") ? "valid" : "invalid";
                 errors.confirmPassword.message = (value !== "") ? "" : "Please enter your confirmation password";
-                break;
-            }
-            case "roles": {
-                setSelectedRoles(typeof value === 'string' ? value.split(',') : value);
-                errors.roles.status = (value.length !== 0) ? "valid" : "invalid";
-                errors.roles.message = (value.length !== 0) ? "valid" : "Please select atleast one role";
                 break;
             }
             case "status":
@@ -379,12 +267,6 @@ export default function UserForm() {
             isValid = false;
         }
 
-        if(errors.organization.status === 'invalid' || errors.organization.status === ''){
-            errors.organization.status = "invalid";
-            errors.organization.message = "Please select your organization";
-            isValid = false;
-        }
-
         if(errors.password.status === 'invalid' || errors.password.status === ''){
             errors.password.status = "invalid";
             errors.password.message = "Please select your password";
@@ -394,11 +276,6 @@ export default function UserForm() {
         if(errors.confirmPassword.status === 'invalid' || errors.confirmPassword.status === ''){
             errors.confirmPassword.status = "invalid";
             errors.confirmPassword.message = "Please select your confirmation password";
-            isValid = false;
-        }
-        if(errors.roles.status === 'invalid' || errors.roles.status === ''){
-            errors.roles.status = "invalid";
-            errors.roles.message = "Please select atleast one role";
             isValid = false;
         }
         
@@ -428,9 +305,8 @@ export default function UserForm() {
         }
         
         formData.append("name", name);
-        formData.append("msisdn", phoneNumber);
+        formData.append("phoneNumber", phoneNumber);
         formData.append("email", email);
-        formData.append("organization", organization);
         formData.append("status", checked ? "1" : "0");
         if(isUpdateView){
             if(password === ''){
@@ -442,39 +318,38 @@ export default function UserForm() {
             formData.append("password", password);
         }
 
-        if(selectedRoles.length > 0){
-            selectedRoles.map(role =>(
-                formData.append("roles", role)
-            ))
-        }
-
         setShowGlobalErrorAlert(false);
         setGlobalErrorMessage("");
         setLoading(true);
-        let url = `${BASE_URL}/users/create/`;
+        let url = `${BASE_URL}/users/`;
         let method = 'POST';
         if(isUpdateView){
             const userId = id; // get from router
-            url = `${BASE_URL}/users/update/${userId}`;
+            url = `${BASE_URL}/users/${userId}`;
             method = 'PUT';
         }
 
         Api.request(method, url, formData, true)
             .then((response) =>{
                 const { data } = response;
-                console.log("udate data ", data)
-                if(data.return_code === "00"){
+                if(data){
                     navigate('/users');
+                    toast.success(data.message);
                 }else{
                     setShowGlobalErrorAlert(true);
-                    setGlobalErrorMessage(data.return_message !== null ? data.return_message : "Validation Error");
+                    setGlobalErrorMessage(data.message !== null ? data.message : "Validation Error");
                 }
                 setLoading(false);
             }).catch((error)=>{
-                console.log(error);
-                setShowGlobalErrorAlert(true);
-                setGlobalErrorMessage(error.message !== null ? error.message : "Error submitting form details. Kindly Check and try again");
-                setLoading(false);
+                const resp = Api.getErrorMessage(error);
+                if(resp === "token_expired"){
+                    localStorage.removeItem("token");
+                    navigate("/login")
+                }else{
+                    setLoading(false);
+                    setGlobalErrorMessage(resp);
+                    setShowGlobalErrorAlert(true);
+                }
             });
     }
 
@@ -596,19 +471,7 @@ export default function UserForm() {
                                                 variant="standard"
                                             />
                                         </Grid>
-                                        <Grid item xs={12} md={6} mt={2}>
-                                            <TextField
-                                                label="Email"
-                                                type="email"
-                                                fullWidth
-                                                id="outlined-size-normal"
-                                                value={email}
-                                                onChange={(event) => handleChange(event, "email")}
-                                                helperText={(errors.email.status === "invalid") && errors.email.message}
-                                                error={errors.email.status === "invalid"}
-                                                variant="standard"
-                                            />
-                                        </Grid>
+                                        
                                     </Grid>
 
                                     <Grid container spacing={6}>
@@ -627,25 +490,16 @@ export default function UserForm() {
                                         </Grid>
                                         <Grid item xs={12} md={6} mt={2}>
                                             <TextField
-                                                id="outlined-select-organization"
-                                                select
-                                                label="Organization"
+                                                label="Email"
+                                                type="email"
                                                 fullWidth
-                                                value={organization}
-                                                onChange={(event) => handleChange(event, "organization")}
-                                                helperText={(errors.organization.status === "invalid") && errors.organization.message}
-                                                error={errors.organization.status === "invalid"}
+                                                id="outlined-size-normal"
+                                                value={email}
+                                                onChange={(event) => handleChange(event, "email")}
+                                                helperText={(errors.email.status === "invalid") && errors.email.message}
+                                                error={errors.email.status === "invalid"}
                                                 variant="standard"
-                                            >
-                                                <MenuItem value="">
-                                                    <em>None</em>
-                                                </MenuItem>
-                                                {organizations.map((option) => (
-                                                    <MenuItem key={option.value} value={option.value}>
-                                                        {option.label}
-                                                    </MenuItem>
-                                                ))}
-                                            </TextField>
+                                            />
                                         </Grid>
                                     </Grid>
 
@@ -677,43 +531,6 @@ export default function UserForm() {
                                                 error={errors.confirmPassword.status === "invalid"}
                                                 variant="standard"
                                             />
-                                        </Grid>
-                                    </Grid>
-                                    
-                                    <Grid container spacing={6}>
-                                        <Grid item xs={12} md={12} mt={2}>
-                                            <FormControl sx={{ width: "100%" }}>
-                                                <InputLabel id="d-multiple-checkbox-label">Roles</InputLabel>
-                                                <Select
-                                                    labelId="d-multiple-checkbox-label"
-                                                    id="demo-multiple-checkbox"
-                                                    multiple
-                                                    variant="standard"
-                                                    value={selectedRoles}
-                                                    onChange={(event) => handleChange(event, "roles")}
-                                                    renderValue={(selected) => (
-                                                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                                                            { roles.length >0 && selected.map((rl) => (
-                                                                <Chip key={rl} label={roles[roles.findIndex(x => x.value === rl)].label} />
-                                                            ))}
-                                                        </Box>
-                                                    )}
-                                                    MenuProps={MenuProps}
-                                                >
-                                                    {roles.map((role) => (
-                                                        <MenuItem key={role.value} value={role.value}>
-                                                            {/* <Checkbox checked={selectedRoles.indexOf(role) > -1} /> */}
-                                                            <Checkbox checked={selectedRoles.findIndex(x => x === role.value) > -1} />
-                                                            <ListItemText primary={role.label} />
-                                                        </MenuItem>
-                                                    ))}
-                                                </Select>
-                                                {
-                                                    errors.roles.status === "invalid" && (
-                                                        <FormHelperText error>{errors.roles.message}</FormHelperText>
-                                                    )
-                                                }
-                                            </FormControl>
                                         </Grid>
                                     </Grid>
                                 </CardContent>

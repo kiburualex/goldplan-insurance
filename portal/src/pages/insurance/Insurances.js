@@ -150,7 +150,7 @@ function Row(props) {
     )
 
 }
-export default function Organizations() {
+export default function Users() {
     const [order, setOrder] = useState('asc');
     const [selected, setSelected] = useState([]);
     const [orderBy, setOrderBy] = useState('name');
@@ -170,7 +170,7 @@ export default function Organizations() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log("loading in useeffect");
+        setExpandable(false);
         fetchData();
     }, []);
 
@@ -179,12 +179,9 @@ export default function Organizations() {
         setLoading(true);
         setShowErrorAlert(false);
         await Api.get(url).then((response) =>{
-            console.log(response);
             const json = response.data;
-            console.log("/insurances", json);
-
             const { pageProfile, data } = json;
-            if(data){
+            if(data.length > 0){
                 setBlocking(false);
                 setLoading(false);
                 setData(data);
@@ -196,13 +193,11 @@ export default function Organizations() {
                 setBlocking(false);
                 setLoading(false);
                 setData([]);
-                setPageNumber(1);
+                setPageNumber(0);
                 setPageSize(10);
                 setTotalElements(0);
                 setTotalPages(0);
-                setShowErrorAlert(true);
-                setErrorMessage(json.return_message);
-            }               
+            }       
         })
         .catch((error) =>{
             const resp = Api.getErrorMessage(error);
@@ -269,7 +264,6 @@ export default function Organizations() {
     };
 
     const handleChangePage = (event, newPage) => {
-        console.log("newPage ", newPage)
         setPageNumber(newPage);
         let params = `pageNumber=${newPage-1}&pageSize=${pageSize}&search=${search}`;
         if(dateFrom && dateTo){
@@ -290,12 +284,10 @@ export default function Organizations() {
         let params = `pageNumber=0&pageSize=${pagesz}&search=${search}`;
         if(dateFrom && dateTo){
             const startDate = format(dateFrom, 'yyyy-MM-dd');
-            console.log("startDate ", startDate);
             params = `${params}&startDate=${startDate}`;
 
             if(dateTo){
                 const endDate = format(dateTo, 'yyyy-MM-dd');
-                console.log("endDate ", endDate);
                 params = `${params}&endDate=${endDate}`;
             }
         }
@@ -309,17 +301,14 @@ export default function Organizations() {
     }
 
     const onFilter = () => {
-        console.log(search, dateFrom, dateTo);
         setSelected([]);
         let params = `search=${search}`;
         if(dateFrom && dateTo){
             const startDate = format(dateFrom, 'yyyy-MM-dd');
-            console.log("startDate ", startDate);
             params = `${params}&startDate=${startDate}`;
 
             if(dateTo){
                 const endDate = format(dateTo, 'yyyy-MM-dd');
-                console.log("endDate ", endDate);
                 params = `${params}&endDate=${endDate}`;
             }
         }
@@ -335,7 +324,6 @@ export default function Organizations() {
     }
 
     const closeErrorAlert = () =>{
-        console.log("//////")
         setShowErrorAlert(!showErrorAlert)
     }
 
@@ -344,12 +332,10 @@ export default function Organizations() {
         let params = `noPagination=1&search=${search}`;
         if(dateFrom && dateTo){
             const startDate = format(dateFrom, 'yyyy-MM-dd');
-            console.log("startDate ", startDate);
             params = `${params}&startDate=${startDate}`;
 
             if(dateTo){
                 const endDate = format(dateTo, 'yyyy-MM-dd');
-                console.log("endDate ", endDate);
                 params = `${params}&endDate=${endDate}`;
             }
         }

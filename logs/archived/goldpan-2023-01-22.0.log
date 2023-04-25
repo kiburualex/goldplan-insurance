@@ -29,7 +29,7 @@
 2023-01-22 15:22:13,788 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.InsuranceController:51 GET /insurance session=CB2C64D7D912DF580230939B3463083E request=RequestMapper(startDate=null, endDate=null, search=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
 2023-01-22 15:22:13,789 INFO [http-nio-9092-exec-4] com.dexni.goldplan.service.InsuranceServiceImpl:37 final filters RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-23, keyword=, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
 2023-01-22 15:22:22,308 INFO [http-nio-9092-exec-5] com.dexni.goldplan.controller.InsuranceController:82 GET //insurance/10 session=CB2C64D7D912DF580230939B3463083E 
-2023-01-22 15:22:22,312 WARN [http-nio-9092-exec-5] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.NotFoundException: Insurance ID [10] not found]
+2023-01-22 15:22:22,312 WARN [http-nio-9092-exec-5] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.ResourceNotFoundException: Insurance ID [10] not found]
 2023-01-22 15:22:26,262 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.InsuranceController:82 GET //insurance/3 session=CB2C64D7D912DF580230939B3463083E 
 2023-01-22 15:23:45,156 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:163 PUT //insurance/3 session=CB2C64D7D912DF580230939B3463083E 
 2023-01-22 15:38:34,844 INFO [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:213 Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
@@ -740,7 +740,7 @@ javax.persistence.NonUniqueResultException: query did not return a unique result
 2023-01-22 16:44:03,797 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:51 GET /insurance session=62842C83B7FA57BCE3F8E2E2CA78FE09 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
 2023-01-22 16:44:03,797 INFO [http-nio-9092-exec-10] com.dexni.goldplan.service.InsuranceServiceImpl:37 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-23, keyword=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
 2023-01-22 16:44:12,645 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:163 PUT //insurance/3 session=62842C83B7FA57BCE3F8E2E2CA78FE09 
-2023-01-22 16:44:12,647 WARN [http-nio-9092-exec-9] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.NotFoundException: Insurance ID [3] not found]
+2023-01-22 16:44:12,647 WARN [http-nio-9092-exec-9] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.ResourceNotFoundException: Insurance ID [3] not found]
 2023-01-22 16:44:31,186 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:91 POST //insurance session=62842C83B7FA57BCE3F8E2E2CA78FE09 payload=Insurance(id=0, name=First Assurance, email=firstassurance@gmail.com, phoneNumber=25472211902, paybill=23450)
 2023-01-22 16:44:32,948 INFO [http-nio-9092-exec-2] com.dexni.goldplan.controller.InsuranceController:91 POST //insurance session=62842C83B7FA57BCE3F8E2E2CA78FE09 payload=Insurance(id=0, name=First Assurance, email=firstassurance@gmail.com, phoneNumber=25472211902, paybill=23450)
 2023-01-22 16:44:39,073 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:91 POST //insurance session=62842C83B7FA57BCE3F8E2E2CA78FE09 payload=Insurance(id=0, name=First Assurance 1, email=firstassurance@gmail.com, phoneNumber=25472211902, paybill=23450)
@@ -751,7 +751,7 @@ javax.persistence.NonUniqueResultException: query did not return a unique result
 2023-01-22 16:45:02,036 INFO [http-nio-9092-exec-7] com.dexni.goldplan.service.InsuranceServiceImpl:37 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-23, keyword=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
 2023-01-22 16:45:17,566 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:73 GET /insurance/ids session=62842C83B7FA57BCE3F8E2E2CA78FE09 usersIds=[11, 10]
 2023-01-22 16:46:09,509 INFO [http-nio-9092-exec-10] com.dexni.goldplan.controller.InsuranceController:163 PUT //insurance/3 session=62842C83B7FA57BCE3F8E2E2CA78FE09 
-2023-01-22 16:46:09,511 WARN [http-nio-9092-exec-10] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.NotFoundException: Insurance ID [3] not found]
+2023-01-22 16:46:09,511 WARN [http-nio-9092-exec-10] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.ResourceNotFoundException: Insurance ID [3] not found]
 2023-01-22 16:46:22,481 INFO [http-nio-9092-exec-9] com.dexni.goldplan.controller.InsuranceController:242 PUT /insurance/ids session=62842C83B7FA57BCE3F8E2E2CA78FE09
 2023-01-22 16:46:22,482 ERROR [http-nio-9092-exec-9] org.apache.juli.logging.DirectJDKLog:175 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Executing an update/delete query; nested exception is javax.persistence.TransactionRequiredException: Executing an update/delete query] with root cause
 javax.persistence.TransactionRequiredException: Executing an update/delete query
@@ -3162,7 +3162,7 @@ Caused by: java.lang.RuntimeException: Uncompilable code - method does not overr
 2023-01-22 22:29:24,529 INFO [http-nio-9092-exec-2] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
 2023-01-22 22:29:24,530 INFO [http-nio-9092-exec-2] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-23, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
 2023-01-22 22:29:29,993 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:90 GET /insurances/615 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
-2023-01-22 22:29:30,010 WARN [http-nio-9092-exec-8] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.NotFoundException: Insurance ID [615] not found]
+2023-01-22 22:29:30,010 WARN [http-nio-9092-exec-8] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.ResourceNotFoundException: Insurance ID [615] not found]
 2023-01-22 22:49:46,252 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-01-22 22:49:46,255 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
 2023-01-22 22:49:46,263 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
@@ -3214,7 +3214,7 @@ Caused by: java.lang.RuntimeException: Uncompilable code - method does not overr
 2023-01-22 22:50:55,659 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
 2023-01-22 22:50:55,660 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 1 ms
 2023-01-22 22:51:01,380 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:90 GET /insurances/615 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
-2023-01-22 22:51:01,402 WARN [http-nio-9092-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.NotFoundException: Insurance ID [615] not found]
+2023-01-22 22:51:01,402 WARN [http-nio-9092-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.ResourceNotFoundException: Insurance ID [615] not found]
 2023-01-22 22:55:24,978 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean:651 Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-01-22 22:55:24,981 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:350 HikariPool-1 - Shutdown initiated...
 2023-01-22 22:55:24,983 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:352 HikariPool-1 - Shutdown completed.
@@ -3266,14 +3266,14 @@ Caused by: java.lang.RuntimeException: Uncompilable code - method does not overr
 2023-01-22 22:58:14,950 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:525 Initializing Servlet 'dispatcherServlet'
 2023-01-22 22:58:14,950 INFO [http-nio-9092-exec-1] org.springframework.web.servlet.FrameworkServlet:547 Completed initialization in 0 ms
 2023-01-22 22:58:20,653 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:90 GET /insurances/615 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
-2023-01-22 22:58:20,676 WARN [http-nio-9092-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.NotFoundException: Insurance ID [615] not found]
+2023-01-22 22:58:20,676 WARN [http-nio-9092-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.ResourceNotFoundException: Insurance ID [615] not found]
 2023-01-22 23:14:25,763 INFO [http-nio-9092-exec-1] com.dexni.goldplan.controller.InsuranceController:51 GET /insurances session=FEDEC43AFF887BBAD83E195CB0CA43A2 request=RequestMapper(startDate=null, endDate=null, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
 2023-01-22 23:14:25,764 INFO [http-nio-9092-exec-1] com.dexni.goldplan.service.InsuranceServiceImpl:41 filters pre-execution RequestFilterMapper(strStartDate=1900-01-01, strEndDate=2023-01-23, search=null, noPagination=0, pageNumber=0, pageSize=10, sortBy=id)
 2023-01-22 23:14:30,233 INFO [http-nio-9092-exec-8] com.dexni.goldplan.controller.InsuranceController:90 GET /insurances/615 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
-2023-01-22 23:14:30,236 WARN [http-nio-9092-exec-8] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.NotFoundException: Insurance ID [615] not found]
+2023-01-22 23:14:30,236 WARN [http-nio-9092-exec-8] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.ResourceNotFoundException: Insurance ID [615] not found]
 2023-01-22 23:14:36,544 WARN [http-nio-9092-exec-7] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "list"]
 2023-01-22 23:14:52,913 INFO [http-nio-9092-exec-3] com.dexni.goldplan.controller.InsuranceController:90 GET /insurances/615 session=FEDEC43AFF887BBAD83E195CB0CA43A2 
-2023-01-22 23:14:52,916 WARN [http-nio-9092-exec-3] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.NotFoundException: Insurance ID [615] not found]
+2023-01-22 23:14:52,916 WARN [http-nio-9092-exec-3] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver:208 Resolved [com.dexni.goldplan.exceptions.ResourceNotFoundException: Insurance ID [615] not found]
 2023-01-22 23:24:32,304 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.AppController:34 /app sessionId=FEDEC43AFF887BBAD83E195CB0CA43A2
 2023-01-22 23:24:32,304 INFO [http-nio-9092-exec-6] com.dexni.goldplan.controller.AppController:43 /app sessionId=FEDEC43AFF887BBAD83E195CB0CA43A2 response={ResponseCode=00, data=[Alex, Kiburu, Muriithi], ResponseDescription=Success}
 2023-01-22 23:40:30,847 INFO [http-nio-9092-exec-4] com.dexni.goldplan.controller.AppController:34 /app sessionId=FEDEC43AFF887BBAD83E195CB0CA43A2

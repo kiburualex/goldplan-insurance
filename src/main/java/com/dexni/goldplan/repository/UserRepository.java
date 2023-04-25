@@ -4,7 +4,7 @@
  */
 package com.dexni.goldplan.repository;
 
-import com.dexni.goldplan.entity.Insurance;
+import com.dexni.goldplan.entity.User;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
@@ -12,18 +12,14 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author kiburu
  */
-
-@Transactional
-public interface InsuranceRepository extends JpaRepository<Insurance, Long>{
-    
+public interface UserRepository extends JpaRepository<User, Long>{
     @Query(""
-            + "SELECT m FROM Insurance m WHERE "
+            + "SELECT m FROM User m WHERE "
             + " ( "
             + " lower(m.name) LIKE (CASE WHEN :search IS NULL THEN lower(concat('%', '','%')) ELSE lower(concat('%', :search,'%')) END) "
             + " OR "
@@ -31,14 +27,14 @@ public interface InsuranceRepository extends JpaRepository<Insurance, Long>{
             + " )"
             + " AND m.timeCreated BETWEEN to_date(:start,'YYYY-MM-DD') AND to_date(:end,'YYYY-MM-DD')"
             + " ORDER BY m.id DESC")
-    public Page<Insurance> findWithFilter(
+    Page<User> findWithFilter(
             @Param("start") String start, 
             @Param("end") String end, 
             @Param("search") String search, 
             Pageable pageable);
     
     @Query(""
-            + "SELECT m FROM Insurance m WHERE "
+            + "SELECT m FROM User m WHERE "
             + " ( "
             + " lower(m.name) LIKE (CASE WHEN :search IS NULL THEN lower(concat('%', '','%')) ELSE lower(concat('%', :search,'%')) END) "
             + " OR "
@@ -46,22 +42,15 @@ public interface InsuranceRepository extends JpaRepository<Insurance, Long>{
             + " )"
             + " AND m.timeCreated BETWEEN to_date(:start,'YYYY-MM-DD') AND to_date(:end,'YYYY-MM-DD')"
             + " ORDER BY m.id DESC")
-    public List<Insurance> findUnpaginatedWithFilter(
+    List<User> findUnPaginatedWithFilter(
             @Param("start") String start, 
             @Param("end") String end, 
             @Param("search") String search);
     
-    @Query("SELECT m FROM Insurance m WHERE lower(m.name)=lower(:name)")
-    public Optional<Insurance> findByName(@Param("name") String name);
-
-    @Query("SELECT m FROM Insurance m WHERE lower(m.email)=lower(:email)")
-    public Optional<Insurance> findByEmail(@Param("email") String email);
-
-    @Query("SELECT m FROM Insurance m WHERE lower(m.paybill)=lower(:paybill)")
-    public Optional<Insurance> findByPaybill(@Param("paybill") String paybill);
-
-    List<Insurance> findByIdIn(List<Long> ids);
+    @Query("SELECT m FROM User m WHERE lower(m.email)=lower(:email)")
+    Optional<User> findByEmail(@Param("email") String email);
+    
+    List<User> findByIdIn(List<Long> ids);
     
     int deleteByIdIn(List<Long> ids);
-    
 }

@@ -4,13 +4,13 @@
  */
 package com.dexni.goldplan.controller;
 
-import com.dexni.goldplan.exceptions.BadRequestException;
-import com.dexni.goldplan.service.InsuranceService;
-import com.dexni.goldplan.entity.Insurance;
-import com.dexni.goldplan.exceptions.ResourceNotFoundException;
+import com.dexni.goldplan.dto.UserDTO;
+import com.dexni.goldplan.entity.User;
 import com.dexni.goldplan.model.MultipleIdsMapper;
 import com.dexni.goldplan.model.RequestFilterMapper;
 import com.dexni.goldplan.model.RequestMapper;
+import com.dexni.goldplan.service.UserService;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -23,9 +23,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -38,91 +40,79 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author kiburu
  */
+
 @Slf4j
 @RestController
-@RequestMapping("/insurances")
-public class InsuranceController {
-    final String path = "/insurances";
+@RequestMapping("/users")
+public class UserController {
+    final String path = "/users";
     
     @Autowired
-    InsuranceService insuranceService;
+    UserService userService;
     
     @GetMapping("")
-    public ResponseEntity<?> listInsurances(RequestMapper requestMapper, 
+    public ResponseEntity<?> listUsers(RequestMapper requestMapper, 
             HttpServletRequest request){
         log.info("GET {} session={} request={}", path, 
                 request.getSession().getId(), requestMapper.toString());
         
-        Map<String, Object> responseMap = new HashMap<>();
-                
-        RequestFilterMapper filterMapper = requestMapper.toFilterDTO();
-        List<Insurance> insurances = new ArrayList<>();
-        if(filterMapper.getNoPagination().equals(1)){
-            insurances = insuranceService.findAllUnpaginatedInsurances(filterMapper);
-        }else{
-            Page<Insurance> ctrx = insuranceService.findAllInsurances(filterMapper);
-            Map<String, Object> pageProfileMap = new HashMap<>();
-            if(ctrx.hasContent()){
-                pageProfileMap.put("pageNumber", ctrx.getNumber());
-                pageProfileMap.put("pageSize", ctrx.getSize());
-                pageProfileMap.put("totalPages", ctrx.getTotalPages());
-                pageProfileMap.put("totalElements", ctrx.getTotalElements());
-                insurances = ctrx.getContent();
-            }
-            
-            responseMap.put("pageProfile", pageProfileMap);
-        }
-        
-        responseMap.put("data", insurances);
+        Map<String, Object> responseMap = userService.findAllUsers(requestMapper);
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
     
     @GetMapping("/ids")
-    public ResponseEntity<?> listInsurancesByIds(@RequestParam(required=true) List<Long> ids, HttpServletRequest request) {
-        log.info("GET {}/ids session={} insuranceIds={}", path, request.getSession().getId(), ids);
-        List<Insurance> insurances = insuranceService.findInsurancesByIdsIn(ids);
+    public ResponseEntity<?> listUserByIds(@RequestParam(required=true) List<Long> ids, HttpServletRequest request) {
+        log.info("GET {}/ids session={} usersIds={}", path, request.getSession().getId(), ids.toString());
+        
+        List<UserDTO> users = userService.findUsersByIdsIn(ids);
         Map<String, Object> responseMap = new HashMap<>();
-        responseMap.put("data", insurances);
+        responseMap.put("data", users);
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<?> getInsuranceById(@PathVariable Long id, HttpServletRequest request) {
+    public ResponseEntity<?> getUserById(@PathVariable Long id, HttpServletRequest request) {
         log.info("GET {}/{} session={} ", path, id, request.getSession().getId());
-        Insurance insurance = insuranceService.findInsuranceById(id);
+        UserDTO user = userService.findUserById(id);
         Map<String, Object> responseMap = new HashMap<>();
-        responseMap.put("data", insurance); 
+        responseMap.put("data", user); 
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
     
-    @PostMapping("")
-    public ResponseEntity createInsurance(@RequestBody Insurance insuranceRequest, HttpServletRequest request) {
-        log.info("POST {} session={} payload={}", path, request.getSession().getId(), insuranceRequest.toString());
-        Insurance savedInsurance = insuranceService.createInsurance(insuranceRequest);
+    @PostMapping(path="",
+            consumes = MediaType.MULTIPART_FORM_DATA_VALUE, 
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity createUser(@ModelAttribute User userRequest, HttpServletRequest request) {
+        log.info("POST {} session={} payload={}", path, request.getSession().getId(), userRequest.toString());
+
+        UserDTO createdUser = userService.createUser(userRequest);
         Map<String, Object> responseMap = new HashMap<>();
         responseMap.put("message", "Created successfully");
-        responseMap.put("data", savedInsurance);
+        responseMap.put("data", createdUser);
         return new ResponseEntity<>(responseMap, HttpStatus.CREATED);
     }
     
-    @PutMapping("/{id}")
-    public ResponseEntity<?> updateInsurance(@PathVariable Long id, @RequestBody Insurance insuranceRequest, HttpServletRequest request) {
+    @PutMapping(path="/{id}",
+            consumes = MediaType.MULTIPART_FORM_DATA_VALUE, 
+            produces = MediaType.APPLICATION_JSON_VALUE )
+    public ResponseEntity<?> updateUser(@PathVariable Long id, @ModelAttribute User userRequest, HttpServletRequest request) {
         log.info("PUT {}/{} session={} ", path, id, request.getSession().getId());
-        Insurance savedInsurance = insuranceService.updateInsurance(id, insuranceRequest);
+
+        UserDTO updatedUser = userService.updateUser(id, userRequest);
         Map<String, Object> responseMap = new HashMap<>();
         responseMap.put("message", "Updated successfully");
-        responseMap.put("data", savedInsurance);
+        responseMap.put("data", updatedUser);
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteInsuranceById(@PathVariable Long id, HttpServletRequest request){
+    public ResponseEntity<?> deleteUserById(@PathVariable Long id, HttpServletRequest request){
         log.info("DELETE {}/{} session={}", path, id, request.getSession().getId());
         Map<String, Object> responseMap = new HashMap<>();
-        Insurance insurance = insuranceService.findInsuranceById(id);
-        Boolean isDeleted = insuranceService.deleteInsuranceById(insurance.getId());
+        UserDTO user = userService.findUserById(id);
+        Boolean isDeleted = userService.deleteUserById(user.getId());
         if(!isDeleted){
-            responseMap.put("message", "Insurance ID "+ id +" not deleted");
+            responseMap.put("message", "User ID "+ id +" not deleted");
             return new ResponseEntity<>(responseMap, HttpStatus.EXPECTATION_FAILED);
         }
         
@@ -131,13 +121,13 @@ public class InsuranceController {
     }
     
     @PutMapping("/ids")
-    public ResponseEntity<?> deleteInsuranceByIds(@RequestBody MultipleIdsMapper idsMapper, HttpServletRequest request){
+    public ResponseEntity<?> deleteUsersByIds(@RequestBody MultipleIdsMapper idsMapper, HttpServletRequest request){
         log.info("PUT {}/ids session={} ids={}", path, request.getSession().getId(), idsMapper.getIds());
         
         Map<String, Object> responseMap = new HashMap<>();
-        Boolean isDeleted = insuranceService.deleteInsurancesByIds(idsMapper.getIds());
+        Boolean isDeleted = userService.deleteUsersByIds(idsMapper.getIds());
         if(!isDeleted){
-            responseMap.put("message", "Insurance IDs ["+ idsMapper.getIds().toString() +"] not deleted");
+            responseMap.put("message", "User IDs ["+ idsMapper.getIds().toString() +"] not deleted");
             return new ResponseEntity<>(responseMap, HttpStatus.EXPECTATION_FAILED);
         }
         

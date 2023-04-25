@@ -14,7 +14,6 @@ import {
     Container,
     Alert,
     Card,
-    Chip,
     Table,
     Stack,
     Avatar,
@@ -48,8 +47,8 @@ import Helpers from '../../common/Helpers';
 const TABLE_HEAD = [
     { id: 'name', label: 'Name', alignRight: false },
     { id: 'email', label: 'Email', alignRight: false },
-    { id: 'organization', label: 'Organization', alignRight: false },
-    { id: 'time_created', label: 'Time Created', alignRight: false },
+    { id: 'phoneNumber', label: 'Phone Number', alignRight: false },
+    { id: 'timeCreated', label: 'Time Created', alignRight: false },
     { id: 'status', label: 'Status', alignRight: false },
     { id: '' }
 ];
@@ -63,9 +62,8 @@ function Row(props) {
 
     const active = (row.status === null || row.status === '1') ? 'active' : 'inactive';
     const status = (row.status === null || row.status === '1') ? 'success' : 'error';
-    const organization = row.organization === null ? '' : row.organization.name;
     // const timeCreated = Helpers.formatTime(row.timeCreated)
-    const timeCreated = format(row.timeCreated, 'dd-MM-yyyy hh:mm a');
+    const timeCreated = format(new Date(row.timeCreated), 'dd-MM-yyyy hh:mm a');
     const avatarUrl = row.avatarContent ? `data:${row.avatarContentType};base64, ${row.avatarContent}` : '';
 
     return (
@@ -108,7 +106,7 @@ function Row(props) {
                     </Stack>
                 </TableCell>
                 <TableCell align="left">{row.email}</TableCell>
-                <TableCell align="left">{organization}</TableCell>
+                <TableCell align="left">{row.phoneNumber}</TableCell>
                 <TableCell align="left">{timeCreated}</TableCell>
                 <TableCell align="left">
                     <Label
@@ -150,14 +148,6 @@ function Row(props) {
                             <Grid container spacing={2}>
                                 <Grid item xs={12} md={4} mt={2}>
                                     <Typography variant="subtitle1">
-                                        Organization
-                                    </Typography>
-                                    <Typography sx={{fontSize: 15}}>
-                                        {organization}
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs={12} md={4} mt={2}>
-                                    <Typography variant="subtitle1">
                                         Email
                                     </Typography>
                                     <Typography sx={{fontSize: 15}}>
@@ -169,18 +159,10 @@ function Row(props) {
                                         Phone Number
                                     </Typography>
                                     <Typography sx={{fontSize: 15}}>
-                                        {row.msisdn}
+                                        {row.phoneNumber}
                                     </Typography>
                                 </Grid>
-                                <Grid item xs={12} md={4} mt={2}>
-                                    <Typography variant="subtitle1">
-                                        Phone Number
-                                    </Typography>
-                                    <Typography sx={{fontSize: 15}}>
-                                        {row.msisdn}
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs={12} md={4} mt={2}>
+                                {/* <Grid item xs={12} md={4} mt={2}>
                                     <Typography variant="subtitle1">
                                         Roles
                                     </Typography>
@@ -188,7 +170,7 @@ function Row(props) {
                                         <Chip sx={{mr: 2}} key={`${role.id}_${rli}`} label={role.name} />
                                     )) : null
                                     }
-                                </Grid>
+                                </Grid> */}
                             </Grid>
                             {/* later for data with tables inside */}
                             {/* <Table size="small" aria-label="purchases">
@@ -244,7 +226,7 @@ export default function Users() {
     const navigate = useNavigate();
 
     useEffect(() => { 
-        console.log("loading in useeffect");
+        setExpandable(false);
         fetchData();
     }, []);
 
@@ -253,30 +235,25 @@ export default function Users() {
         setLoading(true);
         setShowErrorAlert(false);
         await Api.get(url).then((response) =>{
-            console.log(response);
             const json = response.data;
-            console.log("/users/", json);
-            if(json.return_code === "00"){
-                const { pageProfile, results } = json.data;
+            const { pageProfile, data } = json;
+            if(data.length > 0){
                 setBlocking(false);
                 setLoading(false);
-                setData(results);
+                setData(data);
                 setPageNumber(pageProfile.pageNumber + 1);
                 setPageSize(pageProfile.pageSize);
                 setTotalElements(pageProfile.totalElements);
                 setTotalPages(pageProfile.totalPages);
-              }else{
-
-                    setBlocking(false);
-                    setLoading(false);
-                    setData([]);
-                    setPageNumber(1);
-                    setPageSize(10);
-                    setTotalElements(0);
-                    setTotalPages(0);
-                    setShowErrorAlert(true);
-                    setErrorMessage(json.return_message);
-              }               
+            }else{
+                setBlocking(false);
+                setLoading(false);
+                setData([]);
+                setPageNumber(0);
+                setPageSize(10);
+                setTotalElements(0);
+                setTotalPages(0);
+            }          
         })
         .catch((error) =>{
             const resp = Api.getErrorMessage(error);
@@ -287,7 +264,7 @@ export default function Users() {
                 setBlocking(false);
                 setLoading(false);
                 setData([]);
-                setPageNumber(1);
+                setPageNumber(0);
                 setPageSize(10);
                 setTotalElements(0);
                 setTotalPages(0);
@@ -443,12 +420,10 @@ export default function Users() {
         const itemsFormatted = [];
         if (jsonData.length > 0) {
             jsonData.forEach((item) => {
-                const organization = item.organization ? item.organization.name : "";
                 itemsFormatted.push({
                     "Name": item.name,
                     "Email": item.email,
-                    "Phone Number": item.msisdn,
-                    "Organization": organization,
+                    "Phone Number": item.phoneNumber,
                     "Created On": Helpers.formatTime(item.timeCreated)
                 });
             });
@@ -460,21 +435,18 @@ export default function Users() {
         const headers = [
             "Name", 
             "Email", 
-            "Phone Number", 
-            "Organization", 
+            "Phone Number",
             "Created On"
         ];
         
         const rows = [];
         if (jsonData.length > 0) {
             jsonData.forEach(item => {
-                const organization = item.organization ? item.organization.name : "";
                 // const avatarUrl = item.avatarContent ? `data:${item.avatarContentType};base64, ${item.avatarContent}` : '';
                 const itemData = [
                     item.name,
                     item.email,
-                    item.msisdn,
-                    organization,
+                    item.phoneNumber,
                     Helpers.formatTime(item.timeCreated)
                 ];
                 rows.push(itemData);

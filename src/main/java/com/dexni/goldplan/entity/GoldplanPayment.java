@@ -5,6 +5,7 @@
 package com.dexni.goldplan.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,26 +23,44 @@ import lombok.ToString;
  * @author kiburu
  */
 @Entity
-@Table(name = "insurances")
+@Table(name = "goldplan_payments")
 @Data
 @NoArgsConstructor
-public class Insurance implements Serializable {
+public class GoldplanPayment implements Serializable{
     
     @Id
     @GeneratedValue
     private Long id;
     
-    @Column(name = "name", unique=true)
-    private String name;
+    @Column(name = "customer_name")
+    private String customerName;
     
-    @Column(name = "email")
-    private String email;
+    @Column(name = "customer_phone")
+    private String customerPhoneNumber;
     
-    @Column(name = "phoneNumber")
-    private String phoneNumber;
+    @Column(name = "amount")
+    private BigDecimal amount;
     
-    @Column(name = "paybill")
-    private String paybill;
+    @Column(name = "amount_for_insurance")
+    private BigDecimal amountForInsurance;
+    
+    @Column(name = "profit")
+    private BigDecimal profit;
+
+    @Column(name = "originator_converstion_id")
+    private String originatorConverstionID;
+    
+    @Column(name = "conversation_id")
+    private String conversationID;
+    
+    @Column(name = "TransactionReceipt")
+    private String mpesaReference;
+    
+    @Column(name = "status")
+    private String status;
+    
+    @Column(name = "description")
+    private String description;
     
     @ToString.Exclude
     @Column(name = "time_created", updatable=false)
@@ -51,5 +70,6 @@ public class Insurance implements Serializable {
     @ToString.Exclude
     @Column(name = "time_updated")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date timeUpdated;   
+    private Date timeUpdated; 
+    
 }

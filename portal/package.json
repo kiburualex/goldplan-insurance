@@ -3,8 +3,6 @@
   "author": "minimals.cc",
   "licence": "MIT",
   "version": "1.2.0",
-  "homepage": ".",
-  "proxy": "http://localhost:9092",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

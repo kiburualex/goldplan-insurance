@@ -80,7 +80,7 @@ export default function InsuranceForm() {
                     setErrors(errors);
                 }else{
                     setShowGlobalErrorAlert(true);
-                    setGlobalErrorMessage(json.return_message);
+                    setGlobalErrorMessage(json.message);
                 }               
             })
             .catch((error) =>{
@@ -92,7 +92,6 @@ export default function InsuranceForm() {
                     setGlobalErrorMessage(resp);
                     setShowGlobalErrorAlert(true);
                 }
-
             });
         };
 
@@ -220,7 +219,6 @@ export default function InsuranceForm() {
         Api.request(method, url, json, false)
             .then((response) =>{
                 const { data } = response;
-                console.log("update data ", data)
                 if(data){
                     navigate('/insurances');
                     toast.success(data.message);
